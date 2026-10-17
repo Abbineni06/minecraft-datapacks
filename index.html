@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Datapack Studio — Premium & Free Next-Gen Datapacks</title>
+  <meta name="description" content="Discover, download, and commission next-generation Minecraft Java Edition datapacks. Verified for Minecraft 26.2 and 1.21+. 100% vanilla, lossless, and multiplayer ready.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span>⚡</span> Minecraft Datapack Studio
+      </a>
+      <ul class="nav-links">
+        <li><a href="#datapacks">Datapacks</a></li>
+        <li><a href="#commission">Request Custom</a></li>
+        <li><a href="#pricing">Commercial Licenses</a></li>
+        <li><a href="#install">Installation</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#commission" class="btn btn-primary btn-sm">
+        ✨ Hire Me / Request
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span>🚀</span> Minecraft 26.2 & 1.21+ Native Engine Verified
+    </div>
+    <h1>Next-Generation <span>Minecraft Datapacks</span><br>Engineered for Peak Gameplay</h1>
+    <p>
+      Production-grade survival mechanics, living weapon progression, one-click inventory sorters, and extreme OP loot systems. 100% vanilla, zero client mods required, and multiplayer ready.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#datapacks" class="btn btn-primary">
+        🔥 Explore All Datapacks (8)
+      </a>
+      <a href="#commission" class="btn btn-secondary">
+        ✨ Commission a Custom Datapack
+      </a>
+      <a href="downloads/Minecraft_Datapack_Studio.zip" class="btn btn-gold" download onclick="trackDownload('Master Studio Bundle')">
+        👑 Download Master Bundle .ZIP
+      </a>
+    </div>
+
+    <!-- Live Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Production Datapacks</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Vanilla Java Compatible</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0 ms</div>
+        <div class="stat-label">Zero Lag Engine Tested</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">6,800+</div>
+        <div class="stat-label">Community Downloads</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Controls: Search & Category Filter -->
+  <section class="controls-section" id="datapacks">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search datapacks by name, mechanics, or enchants (e.g., 'Sword', 'AutoSort', 'JumpLoot', '255', 'Mining')...">
+    </div>
+
+    <div class="filter-pills">
+      <button class="pill active" data-category="all">All Packs (8)</button>
+      <button class="pill" data-category="op">⚡ Extreme OP</button>
+      <button class="pill" data-category="combat">⚔️ Combat & Weapons</button>
+      <button class="pill" data-category="magic">🔮 Magic & Relics</button>
+      <button class="pill" data-category="utility">🧹 Utility & Sorter</button>
+      <button class="pill" data-category="survival">⛏️ Survival & Mining</button>
+      <button class="pill" data-category="bundle">👑 Studio Bundles</button>
+    </div>
+  </section>
+
+  <!-- Datapack Grid Section -->
+  <section class="products-section">
+    <div class="grid" id="datapackGrid">
+      <!-- Cards dynamically injected by app.js -->
+    </div>
+  </section>
+
+  <!-- Commission / Request Custom Datapack Section -->
+  <section class="commission-section" id="commission">
+    <div class="commission-box">
+      <div class="commission-header">
+        <h2>✨ Request a Custom Datapack</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Need a bespoke, lag-free datapack for your survival world, SMP server, or YouTube video? Describe your idea below to receive a direct quote within 24 hours.
+        </p>
+      </div>
+
+      <form class="commission-form" id="commissionForm">
+        <div class="form-group">
+          <label for="commName">Your Name / Creator Handle *</label>
+          <input type="text" id="commName" placeholder="e.g. Alex or MinecraftMaster" required>
+        </div>
+
+        <div class="form-group">
+          <label for="commContact">Discord Tag or Email *</label>
+          <input type="text" id="commContact" placeholder="e.g. alex#1234 or alex@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="commPackName">Datapack Concept / Title *</label>
+          <input type="text" id="commPackName" placeholder="e.g. Dragon Slayer Bow or Custom Leveling System" required>
+        </div>
+
+        <div class="form-group">
+          <label for="commVersion">Target Minecraft Version</label>
+          <select id="commVersion">
+            <option value="26.2 (Latest Native)">Minecraft 26.2 (Native Pack Format 107)</option>
+            <option value="1.21.4">Minecraft 1.21.4 (Pack Format 61)</option>
+            <option value="1.21.1">Minecraft 1.21.1 (Pack Format 48)</option>
+            <option value="1.20.6 / 1.20.4">Minecraft 1.20.x</option>
+            <option value="Cross-Compatible">Universal Cross-Compatible (1.21 to 26.3)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="commBudget">Estimated Budget Range</label>
+          <select id="commBudget">
+            <option value="$15 - $30 (Simple mechanics, 1-2 features)">$15 - $30 (Small mechanic / tweak)</option>
+            <option value="$35 - $60 (Full standalone system, custom items, HUD)">$35 - $60 (Full standalone system / HUD)</option>
+            <option value="$75 - $150 (Comprehensive suite, custom boss, multiplayer)">$75 - $150 (Advanced mechanics & boss)</option>
+            <option value="$150+ (Enterprise Server Datapack Suite)">$150+ (Major Network / SMP Core)</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="commDesc">Detailed Mechanics & Requirements *</label>
+          <textarea id="commDesc" rows="4" placeholder="Describe how the mechanics should work, triggers, commands, custom items, sounds, particles, and any specific cooldowns..." required></textarea>
+        </div>
+
+        <div class="commission-actions">
+          <button type="button" class="btn btn-secondary" onclick="copyDiscordOrder()">
+            📋 Copy Order for Discord
+          </button>
+          <button type="submit" class="btn btn-primary">
+            🚀 Submit Request via Email
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Storefront & Commercial Licensing -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-header">
+      <h2>💎 Commercial Licenses & Monetization</h2>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">
+        Choose the right license for your personal singleplayer journey or commercial multiplayer network.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Tier 1 -->
+      <div class="pricing-card">
+        <div>
+          <div class="pricing-tier">Community Player</div>
+          <div class="pricing-price">$0 <span>/ forever</span></div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+            Perfect for singleplayer survival worlds, LAN parties, and private friend realms.
+          </p>
+          <ul class="pricing-features">
+            <li>Free download of all individual datapacks</li>
+            <li>Full gameplay mechanics and features</li>
+            <li>Survival friendly player triggers</li>
+            <li>Community bug reports</li>
+          </ul>
+        </div>
+        <a href="#datapacks" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+          Browse Free Packs
+        </a>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="pricing-card featured">
+        <span class="pricing-tag">Most Popular</span>
+        <div>
+          <div class="pricing-tier">Server Commercial License</div>
+          <div class="pricing-price">$14.99 <span>/ one-time</span></div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+            For public SMP servers, monetized networks, streamers, and content creators.
+          </p>
+          <ul class="pricing-features">
+            <li>Commercial deployment rights on unlimited servers</li>
+            <li>Permission to monetize in server store / crates</li>
+            <li>Full un-obfuscated source code & build scripts</li>
+            <li>Priority 24/7 developer Discord support</li>
+            <li>Free updates for future Minecraft versions</li>
+          </ul>
+        </div>
+        <a href="https://paypal.me/SaikiranDatapacks/14.99" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+          💳 Buy Commercial License ($14.99)
+        </a>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="pricing-card">
+        <div>
+          <div class="pricing-tier">Bespoke Custom Build</div>
+          <div class="pricing-price">$49.99+ <span>/ project</span></div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+            A brand-new, customized datapack tailored precisely to your game vision.
+          </p>
+          <ul class="pricing-features">
+            <li>100% exclusive custom mechanics</li>
+            <li>Tested against live dedicated server engine</li>
+            <li>Custom item textures & sound integration</li>
+            <li>Dedicated documentation & admin controls</li>
+            <li>Delivery within 48 to 72 hours</li>
+          </ul>
+        </div>
+        <a href="#commission" class="btn btn-gold" style="width: 100%; justify-content: center;">
+          ✨ Commission Custom Pack
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Guide Section -->
+  <section class="commission-section" id="install">
+    <div class="commission-box">
+      <div class="commission-header">
+        <h2>🍏 Step-by-Step Installation Guide (macOS & TLauncher)</h2>
+        <p style="color: var(--text-muted);">
+          Follow these quick steps to install any datapack in seconds without unzipping.
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="background: rgba(0,0,0,0.3); border-left: 4px solid var(--accent-blue); padding: 1rem 1.25rem; border-radius: 6px;">
+          <h4 style="color: #fff; margin-bottom: 0.35rem;">1. Locate your Minecraft Saves Folder on macOS:</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            In Finder, press <kbd style="background: #1f2937; padding: 2px 6px; border-radius: 4px; border: 1px solid #4b5563;">Cmd + Shift + G</kbd> and paste:
+          </p>
+          <div class="code-box" style="margin: 0.5rem 0;">~/Library/Application Support/minecraft/saves/</div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.3); border-left: 4px solid var(--accent-purple); padding: 1rem 1.25rem; border-radius: 6px;">
+          <h4 style="color: #fff; margin-bottom: 0.35rem;">2. Copy the Downloaded .ZIP File:</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Open your target world folder, open the <code>datapacks/</code> directory inside, and drag & drop the downloaded <code>.zip</code> file directly inside. <strong>Do NOT unzip it!</strong>
+          </p>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.3); border-left: 4px solid var(--accent-emerald); padding: 1rem 1.25rem; border-radius: 6px;">
+          <h4 style="color: #fff; margin-bottom: 0.35rem;">3. Activate In-Game:</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Join your world, press <kbd style="background: #1f2937; padding: 2px 6px; border-radius: 4px; border: 1px solid #4b5563;">T</kbd> to open chat, and type:
+          </p>
+          <div class="code-box" style="margin: 0.5rem 0;">/reload</div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Verify with <code>/datapack list enabled</code>. The datapack will appear highlighted in green!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="commission-section" id="faq" style="margin-top: 2rem;">
+    <div class="commission-box">
+      <div class="commission-header">
+        <h2>❓ Frequently Asked Questions</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div>
+          <h4 style="color: #fff; margin-bottom: 0.3rem;">Do these datapacks require Forge, Fabric, or client mods?</h4>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            No! All datapacks are built using 100% pure vanilla Minecraft Java Edition functions, loot tables, and modern item components. Players joining your server do not need to install any mods.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; margin-bottom: 0.3rem;">Are they compatible with Minecraft 26.2 and 1.21.x?</h4>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            Yes! Every datapack includes dual function tag directories (<code>tags/function</code> and <code>tags/functions</code>) and standard <=16 character scoreboard objectives, ensuring full compatibility from 1.21.1 up through 26.3.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; margin-bottom: 0.3rem;">Can I hire you for a custom datapack?</h4>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            Absolutely! Fill out the Commission form above or send an inquiry to <a href="mailto:abbinenisaikiran75@gmail.com" style="color: var(--accent-blue);">abbinenisaikiran75@gmail.com</a>. Quotes are delivered within 24 hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal View -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-window">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <span>⚡</span> Minecraft Datapack Studio
+      </div>
+      <p style="max-width: 600px;">
+        High-performance, vanilla-safe Minecraft Java Edition datapacks crafted with obsessive engineering standards.
+      </p>
+      <div class="footer-links">
+        <a href="#datapacks">Datapacks</a>
+        <a href="#commission">Hire Developer</a>
+        <a href="#pricing">Commercial Licenses</a>
+        <a href="mailto:abbinenisaikiran75@gmail.com">Contact: abbinenisaikiran75@gmail.com</a>
+      </div>
+      <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 1rem;">
+        &copy; 2026 Minecraft Datapack Studio by Saikiran. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
